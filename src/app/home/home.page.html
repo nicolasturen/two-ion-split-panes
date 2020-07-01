@@ -1,20 +1,21 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-split-pane contentId="main-splitpane-content">
+  <!--  our side menu  -->
+  <ion-menu contentId="main-splitpane-content" menuId="main-menu" class="menu-pane-visible" >
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Main menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item lines="none" detail="false" routerLink="/home/middle/secondary-splitpane">
+          <ion-icon slot="start" name="clipboard-outline"></ion-icon>
+          <ion-label>Second Splitpane Page</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-</ion-content>
+  <!-- the main content -->
+  <ion-router-outlet id="main-splitpane-content"></ion-router-outlet>
+</ion-split-pane>

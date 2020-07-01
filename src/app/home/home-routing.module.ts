@@ -5,7 +5,22 @@ import { HomePage } from './home.page';
 const routes: Routes = [
   {
     path: '',
+    redirectTo: 'welcome',
+    pathMatch: 'full'
+  },
+  {
+    path: '',
     component: HomePage,
+    children: [
+      {
+        path: 'middle',
+        loadChildren: () => import('./children/middle/middle.module').then( m => m.MiddlePageModule)
+      },
+      {
+        path: 'welcome',
+        loadChildren: () => import('./children/welcome/welcome.module').then( m => m.WelcomePageModule)
+      }
+    ]
   }
 ];
 

@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Secondary Splitpane</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button menu="secondary-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-split-pane contentId="secondary-splitpane-content" when="sm">
+    <!--  the side menu  -->
+    <ion-menu contentId="secondary-splitpane-content" side="end" menuId="secondary-menu">
+      <ion-content class="light-background">
+        <div align="center" class="ion-padding">
+          <ion-label class="ion-text-wrap">Here comes several data</ion-label>
+        </div>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="secondary-splitpane-content"></ion-router-outlet>
+  </ion-split-pane>
+</ion-content>
