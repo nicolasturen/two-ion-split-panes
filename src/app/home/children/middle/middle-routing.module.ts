@@ -6,7 +6,7 @@ import { MiddlePage } from './middle.page';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'secondary-splitpane',
+    redirectTo: 'secondary',
     pathMatch: 'full'
   },
   {
@@ -14,8 +14,8 @@ const routes: Routes = [
     component: MiddlePage,
     children: [
       {
-        path: 'secondary-splitpane',
-        loadChildren: () => import('./children/secondary-splitpane/secondary-splitpane.module').then( m => m.SecondarySplitpanePageModule)
+        path: 'secondary',
+        loadChildren: () => import('./children/secondary/secondary.module').then( m => m.SecondaryPageModule)
       }
     ]
   }

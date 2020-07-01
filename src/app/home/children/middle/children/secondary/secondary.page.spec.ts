@@ -1,19 +1,19 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { SecondarySplitpanePage } from './secondary-splitpane.page';
+import { SecondaryPage } from './secondary.page';
 
-describe('SecondarySplitpanePage', () => {
-  let component: SecondarySplitpanePage;
-  let fixture: ComponentFixture<SecondarySplitpanePage>;
+describe('SecondaryPage', () => {
+  let component: SecondaryPage;
+  let fixture: ComponentFixture<SecondaryPage>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SecondarySplitpanePage ],
+      declarations: [ SecondaryPage ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(SecondarySplitpanePage);
+    fixture = TestBed.createComponent(SecondaryPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));
